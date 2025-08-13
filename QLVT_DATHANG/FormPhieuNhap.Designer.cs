@@ -370,7 +370,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 532);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 549);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.barDockControlBottom.Size = new System.Drawing.Size(923, 20);
@@ -382,7 +382,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 491);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 508);
             // 
             // barDockControlRight
             // 
@@ -391,7 +391,7 @@
             this.barDockControlRight.Location = new System.Drawing.Point(923, 41);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 491);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 508);
             // 
             // barButtonItem1
             // 
@@ -526,7 +526,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 217);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(923, 315);
+            this.groupControl1.Size = new System.Drawing.Size(923, 332);
             this.groupControl1.TabIndex = 15;
             this.groupControl1.Text = "Lập phiếu nhập";
             // 
@@ -542,7 +542,7 @@
             this.groupBoxCTPN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxCTPN.Location = new System.Drawing.Point(394, 153);
             this.groupBoxCTPN.Name = "groupBoxCTPN";
-            this.groupBoxCTPN.Size = new System.Drawing.Size(527, 160);
+            this.groupBoxCTPN.Size = new System.Drawing.Size(527, 177);
             this.groupBoxCTPN.TabIndex = 5;
             this.groupBoxCTPN.TabStop = false;
             this.groupBoxCTPN.Text = "Chi tiết phiếu nhập";
@@ -670,7 +670,7 @@
             this.groupBoxPN.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBoxPN.Location = new System.Drawing.Point(2, 23);
             this.groupBoxPN.Name = "groupBoxPN";
-            this.groupBoxPN.Size = new System.Drawing.Size(392, 290);
+            this.groupBoxPN.Size = new System.Drawing.Size(392, 307);
             this.groupBoxPN.TabIndex = 4;
             this.groupBoxPN.TabStop = false;
             this.groupBoxPN.Text = "Phiếu nhập";
@@ -743,7 +743,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 552);
+            this.ClientSize = new System.Drawing.Size(923, 569);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcPN);
             this.Controls.Add(this.panelControl1);

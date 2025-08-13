@@ -368,13 +368,6 @@ namespace QLVT_DATHANG
             this.txtMAKHO.Text = Program.maKhoDuocChon;
         }
 
-        private void btnChonVT_Click(object sender, EventArgs e)
-        {
-            FormChonVatTu form = new FormChonVatTu();
-            form.ShowDialog();
-            this.txtMAVT.Text = Program.maVatTuDuocChon;
-        }
-
         private bool kiemTraDuLieuDauVao(string cheDo)
         {
             if (cheDo == "Phiếu xuất")
@@ -690,8 +683,8 @@ namespace QLVT_DATHANG
                     this.txtMAKHO.Enabled = false;
                     this.btnChonKho.Enabled = true;
                 }
-                /*dang o che do Chi Tiết Phiếu Nhập*/
-                if (btnMENU.Links[0].Caption == "Chi Tiết Phiếu Nhập")
+                /*dang o che do Chi tiết phiếu xuất*/
+                if (btnMENU.Links[0].Caption == "Chi tiết phiếu xuất")
                 {
                     this.txtMAPX.Enabled = false;
                     this.txtMAVT.Enabled = false;
@@ -824,7 +817,7 @@ namespace QLVT_DATHANG
                     {
                         bdsPX.RemoveCurrent();
                     }
-                    if (cheDo == "Chi Tiết Phiếu Nhập")
+                    if (cheDo == "Chi tiết phiếu xuất")
                     {
                         bdsCTPX.RemoveCurrent();
                     }
@@ -862,6 +855,13 @@ namespace QLVT_DATHANG
                 // xoa cau truy van hoan tac di
                 undoList.Pop();
             }
+        }
+
+        private void btnChonVT_Click_1(object sender, EventArgs e)
+        {
+            FormChonVatTu form = new FormChonVatTu();
+            form.ShowDialog();
+            this.txtMAVT.Text = Program.maVatTuDuocChon;
         }
     }
 }

@@ -62,6 +62,7 @@
             this.bdsPX = new System.Windows.Forms.BindingSource(this.components);
             this.phieuXuatTableAdapter = new QLVT_DATHANG.DSTableAdapters.PhieuXuatTableAdapter();
             this.tableAdapterManager = new QLVT_DATHANG.DSTableAdapters.TableAdapterManager();
+            this.cTPXTableAdapter = new QLVT_DATHANG.DSTableAdapters.CTPXTableAdapter();
             this.gcPX = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAPX = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -70,26 +71,25 @@
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.groupBoxPX = new System.Windows.Forms.GroupBox();
-            this.txtMAPX = new DevExpress.XtraEditors.TextEdit();
-            this.dateNGAY = new DevExpress.XtraEditors.DateEdit();
-            this.txtHOTENKH = new DevExpress.XtraEditors.TextEdit();
-            this.txtMANV = new DevExpress.XtraEditors.TextEdit();
-            this.txtMAKHO = new DevExpress.XtraEditors.TextEdit();
+            this.groupBoxCTPX = new System.Windows.Forms.GroupBox();
+            this.btnChonVT = new System.Windows.Forms.Button();
+            this.txtDONGIA = new DevExpress.XtraEditors.SpinEdit();
             this.bdsCTPX = new System.Windows.Forms.BindingSource(this.components);
-            this.cTPXTableAdapter = new QLVT_DATHANG.DSTableAdapters.CTPXTableAdapter();
+            this.txtSOLUONG = new DevExpress.XtraEditors.SpinEdit();
+            this.txtMAVT = new DevExpress.XtraEditors.TextEdit();
             this.gcCTPX = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAPX1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAVT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDONGIA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.groupBoxPX = new System.Windows.Forms.GroupBox();
             this.btnChonKho = new System.Windows.Forms.Button();
-            this.groupBoxCTPX = new System.Windows.Forms.GroupBox();
-            this.btnChonVT = new System.Windows.Forms.Button();
-            this.txtDONGIA = new DevExpress.XtraEditors.SpinEdit();
-            this.txtSOLUONG = new DevExpress.XtraEditors.SpinEdit();
-            this.txtMAVT = new DevExpress.XtraEditors.TextEdit();
+            this.txtMAKHO = new DevExpress.XtraEditors.TextEdit();
+            this.txtMANV = new DevExpress.XtraEditors.TextEdit();
+            this.txtHOTENKH = new DevExpress.XtraEditors.TextEdit();
+            this.dateNGAY = new DevExpress.XtraEditors.DateEdit();
+            this.txtMAPX = new DevExpress.XtraEditors.TextEdit();
             mAPXLabel = new System.Windows.Forms.Label();
             nGAYLabel = new System.Windows.Forms.Label();
             hOTENKHLabel = new System.Windows.Forms.Label();
@@ -107,21 +107,93 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            this.groupBoxPX.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMAPX.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNGAY.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNGAY.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHOTENKH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMAKHO.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCTPX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcCTPX)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.groupBoxCTPX.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDONGIA.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCTPX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSOLUONG.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMAVT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCTPX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            this.groupBoxPX.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMAKHO.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHOTENKH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNGAY.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNGAY.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMAPX.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // mAPXLabel
+            // 
+            mAPXLabel.AutoSize = true;
+            mAPXLabel.Location = new System.Drawing.Point(39, 41);
+            mAPXLabel.Name = "mAPXLabel";
+            mAPXLabel.Size = new System.Drawing.Size(38, 13);
+            mAPXLabel.TabIndex = 0;
+            mAPXLabel.Text = "MAPX:";
+            // 
+            // nGAYLabel
+            // 
+            nGAYLabel.AutoSize = true;
+            nGAYLabel.Location = new System.Drawing.Point(39, 77);
+            nGAYLabel.Name = "nGAYLabel";
+            nGAYLabel.Size = new System.Drawing.Size(38, 13);
+            nGAYLabel.TabIndex = 2;
+            nGAYLabel.Text = "NGAY:";
+            // 
+            // hOTENKHLabel
+            // 
+            hOTENKHLabel.AutoSize = true;
+            hOTENKHLabel.Location = new System.Drawing.Point(19, 115);
+            hOTENKHLabel.Name = "hOTENKHLabel";
+            hOTENKHLabel.Size = new System.Drawing.Size(58, 13);
+            hOTENKHLabel.TabIndex = 4;
+            hOTENKHLabel.Text = "HOTENKH:";
+            // 
+            // mANVLabel
+            // 
+            mANVLabel.AutoSize = true;
+            mANVLabel.Location = new System.Drawing.Point(205, 41);
+            mANVLabel.Name = "mANVLabel";
+            mANVLabel.Size = new System.Drawing.Size(39, 13);
+            mANVLabel.TabIndex = 6;
+            mANVLabel.Text = "MANV:";
+            // 
+            // mAKHOLabel
+            // 
+            mAKHOLabel.AutoSize = true;
+            mAKHOLabel.Location = new System.Drawing.Point(197, 77);
+            mAKHOLabel.Name = "mAKHOLabel";
+            mAKHOLabel.Size = new System.Drawing.Size(47, 13);
+            mAKHOLabel.TabIndex = 8;
+            mAKHOLabel.Text = "MAKHO:";
+            // 
+            // dONGIALabel
+            // 
+            dONGIALabel.AutoSize = true;
+            dONGIALabel.Location = new System.Drawing.Point(241, 33);
+            dONGIALabel.Name = "dONGIALabel";
+            dONGIALabel.Size = new System.Drawing.Size(51, 13);
+            dONGIALabel.TabIndex = 12;
+            dONGIALabel.Text = "DONGIA:";
+            // 
+            // sOLUONGLabel
+            // 
+            sOLUONGLabel.AutoSize = true;
+            sOLUONGLabel.Location = new System.Drawing.Point(55, 71);
+            sOLUONGLabel.Name = "sOLUONGLabel";
+            sOLUONGLabel.Size = new System.Drawing.Size(59, 13);
+            sOLUONGLabel.TabIndex = 10;
+            sOLUONGLabel.Text = "SOLUONG:";
+            // 
+            // mAVTLabel
+            // 
+            mAVTLabel.AutoSize = true;
+            mAVTLabel.Location = new System.Drawing.Point(76, 33);
+            mAVTLabel.Name = "mAVTLabel";
+            mAVTLabel.Size = new System.Drawing.Size(38, 13);
+            mAVTLabel.TabIndex = 9;
+            mAVTLabel.Text = "MAVT:";
             // 
             // barManager1
             // 
@@ -265,7 +337,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 628);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 568);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.barDockControlBottom.Size = new System.Drawing.Size(924, 20);
@@ -277,7 +349,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 587);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 527);
             // 
             // barDockControlRight
             // 
@@ -286,7 +358,7 @@
             this.barDockControlRight.Location = new System.Drawing.Point(924, 41);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 587);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 527);
             // 
             // barButtonItem1
             // 
@@ -301,7 +373,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 41);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(7);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(924, 46);
+            this.panelControl1.Size = new System.Drawing.Size(924, 36);
             this.panelControl1.TabIndex = 14;
             // 
             // label1
@@ -354,15 +426,19 @@
             this.tableAdapterManager.UpdateOrder = QLVT_DATHANG.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VattuTableAdapter = null;
             // 
+            // cTPXTableAdapter
+            // 
+            this.cTPXTableAdapter.ClearBeforeFill = true;
+            // 
             // gcPX
             // 
             this.gcPX.DataSource = this.bdsPX;
             this.gcPX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcPX.Location = new System.Drawing.Point(0, 87);
+            this.gcPX.Location = new System.Drawing.Point(0, 77);
             this.gcPX.MainView = this.gridView1;
             this.gcPX.MenuManager = this.barManager1;
             this.gcPX.Name = "gcPX";
-            this.gcPX.Size = new System.Drawing.Size(924, 220);
+            this.gcPX.Size = new System.Drawing.Size(924, 129);
             this.gcPX.TabIndex = 15;
             this.gcPX.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -419,147 +495,96 @@
             this.groupControl1.Controls.Add(this.gcCTPX);
             this.groupControl1.Controls.Add(this.groupBoxPX);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 307);
+            this.groupControl1.Location = new System.Drawing.Point(0, 206);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(924, 321);
+            this.groupControl1.Size = new System.Drawing.Size(924, 362);
             this.groupControl1.TabIndex = 16;
             this.groupControl1.Text = "Lập phiếu xuất";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
-            // groupBoxPX
+            // groupBoxCTPX
             // 
-            this.groupBoxPX.Controls.Add(this.btnChonKho);
-            this.groupBoxPX.Controls.Add(mAKHOLabel);
-            this.groupBoxPX.Controls.Add(this.txtMAKHO);
-            this.groupBoxPX.Controls.Add(mANVLabel);
-            this.groupBoxPX.Controls.Add(this.txtMANV);
-            this.groupBoxPX.Controls.Add(hOTENKHLabel);
-            this.groupBoxPX.Controls.Add(this.txtHOTENKH);
-            this.groupBoxPX.Controls.Add(nGAYLabel);
-            this.groupBoxPX.Controls.Add(this.dateNGAY);
-            this.groupBoxPX.Controls.Add(mAPXLabel);
-            this.groupBoxPX.Controls.Add(this.txtMAPX);
-            this.groupBoxPX.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBoxPX.Location = new System.Drawing.Point(2, 23);
-            this.groupBoxPX.Name = "groupBoxPX";
-            this.groupBoxPX.Size = new System.Drawing.Size(468, 296);
-            this.groupBoxPX.TabIndex = 4;
-            this.groupBoxPX.TabStop = false;
-            this.groupBoxPX.Text = "Phiếu xuất";
+            this.groupBoxCTPX.Controls.Add(this.btnChonVT);
+            this.groupBoxCTPX.Controls.Add(dONGIALabel);
+            this.groupBoxCTPX.Controls.Add(this.txtDONGIA);
+            this.groupBoxCTPX.Controls.Add(sOLUONGLabel);
+            this.groupBoxCTPX.Controls.Add(this.txtSOLUONG);
+            this.groupBoxCTPX.Controls.Add(mAVTLabel);
+            this.groupBoxCTPX.Controls.Add(this.txtMAVT);
+            this.groupBoxCTPX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxCTPX.Location = new System.Drawing.Point(417, 155);
+            this.groupBoxCTPX.Name = "groupBoxCTPX";
+            this.groupBoxCTPX.Size = new System.Drawing.Size(505, 205);
+            this.groupBoxCTPX.TabIndex = 5;
+            this.groupBoxCTPX.TabStop = false;
+            this.groupBoxCTPX.Text = "Chi tiết phiếu xuất";
             // 
-            // mAPXLabel
+            // btnChonVT
             // 
-            mAPXLabel.AutoSize = true;
-            mAPXLabel.Location = new System.Drawing.Point(39, 41);
-            mAPXLabel.Name = "mAPXLabel";
-            mAPXLabel.Size = new System.Drawing.Size(38, 13);
-            mAPXLabel.TabIndex = 0;
-            mAPXLabel.Text = "MAPX:";
+            this.btnChonVT.Location = new System.Drawing.Point(256, 59);
+            this.btnChonVT.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChonVT.Name = "btnChonVT";
+            this.btnChonVT.Size = new System.Drawing.Size(142, 37);
+            this.btnChonVT.TabIndex = 15;
+            this.btnChonVT.Text = "Chọn Vật Tư";
+            this.btnChonVT.UseVisualStyleBackColor = true;
+            this.btnChonVT.Click += new System.EventHandler(this.btnChonVT_Click_1);
             // 
-            // txtMAPX
+            // txtDONGIA
             // 
-            this.txtMAPX.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "MAPX", true));
-            this.txtMAPX.Location = new System.Drawing.Point(83, 38);
-            this.txtMAPX.MenuManager = this.barManager1;
-            this.txtMAPX.Name = "txtMAPX";
-            this.txtMAPX.Size = new System.Drawing.Size(100, 20);
-            this.txtMAPX.TabIndex = 1;
-            // 
-            // nGAYLabel
-            // 
-            nGAYLabel.AutoSize = true;
-            nGAYLabel.Location = new System.Drawing.Point(39, 77);
-            nGAYLabel.Name = "nGAYLabel";
-            nGAYLabel.Size = new System.Drawing.Size(38, 13);
-            nGAYLabel.TabIndex = 2;
-            nGAYLabel.Text = "NGAY:";
-            // 
-            // dateNGAY
-            // 
-            this.dateNGAY.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "NGAY", true));
-            this.dateNGAY.EditValue = null;
-            this.dateNGAY.Location = new System.Drawing.Point(83, 74);
-            this.dateNGAY.MenuManager = this.barManager1;
-            this.dateNGAY.Name = "dateNGAY";
-            this.dateNGAY.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtDONGIA.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTPX, "DONGIA", true));
+            this.txtDONGIA.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtDONGIA.Location = new System.Drawing.Point(298, 30);
+            this.txtDONGIA.MenuManager = this.barManager1;
+            this.txtDONGIA.Name = "txtDONGIA";
+            this.txtDONGIA.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNGAY.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNGAY.Size = new System.Drawing.Size(100, 20);
-            this.dateNGAY.TabIndex = 3;
-            // 
-            // hOTENKHLabel
-            // 
-            hOTENKHLabel.AutoSize = true;
-            hOTENKHLabel.Location = new System.Drawing.Point(19, 115);
-            hOTENKHLabel.Name = "hOTENKHLabel";
-            hOTENKHLabel.Size = new System.Drawing.Size(58, 13);
-            hOTENKHLabel.TabIndex = 4;
-            hOTENKHLabel.Text = "HOTENKH:";
-            // 
-            // txtHOTENKH
-            // 
-            this.txtHOTENKH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "HOTENKH", true));
-            this.txtHOTENKH.Location = new System.Drawing.Point(83, 112);
-            this.txtHOTENKH.MenuManager = this.barManager1;
-            this.txtHOTENKH.Name = "txtHOTENKH";
-            this.txtHOTENKH.Size = new System.Drawing.Size(100, 20);
-            this.txtHOTENKH.TabIndex = 5;
-            // 
-            // mANVLabel
-            // 
-            mANVLabel.AutoSize = true;
-            mANVLabel.Location = new System.Drawing.Point(205, 41);
-            mANVLabel.Name = "mANVLabel";
-            mANVLabel.Size = new System.Drawing.Size(39, 13);
-            mANVLabel.TabIndex = 6;
-            mANVLabel.Text = "MANV:";
-            // 
-            // txtMANV
-            // 
-            this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "MANV", true));
-            this.txtMANV.Location = new System.Drawing.Point(250, 38);
-            this.txtMANV.MenuManager = this.barManager1;
-            this.txtMANV.Name = "txtMANV";
-            this.txtMANV.Size = new System.Drawing.Size(100, 20);
-            this.txtMANV.TabIndex = 7;
-            // 
-            // mAKHOLabel
-            // 
-            mAKHOLabel.AutoSize = true;
-            mAKHOLabel.Location = new System.Drawing.Point(197, 77);
-            mAKHOLabel.Name = "mAKHOLabel";
-            mAKHOLabel.Size = new System.Drawing.Size(47, 13);
-            mAKHOLabel.TabIndex = 8;
-            mAKHOLabel.Text = "MAKHO:";
-            // 
-            // txtMAKHO
-            // 
-            this.txtMAKHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "MAKHO", true));
-            this.txtMAKHO.Location = new System.Drawing.Point(250, 74);
-            this.txtMAKHO.MenuManager = this.barManager1;
-            this.txtMAKHO.Name = "txtMAKHO";
-            this.txtMAKHO.Size = new System.Drawing.Size(100, 20);
-            this.txtMAKHO.TabIndex = 9;
+            this.txtDONGIA.Size = new System.Drawing.Size(100, 20);
+            this.txtDONGIA.TabIndex = 14;
             // 
             // bdsCTPX
             // 
             this.bdsCTPX.DataMember = "FK_CTPX_PX";
             this.bdsCTPX.DataSource = this.bdsPX;
             // 
-            // cTPXTableAdapter
+            // txtSOLUONG
             // 
-            this.cTPXTableAdapter.ClearBeforeFill = true;
+            this.txtSOLUONG.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTPX, "SOLUONG", true));
+            this.txtSOLUONG.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtSOLUONG.Location = new System.Drawing.Point(120, 68);
+            this.txtSOLUONG.MenuManager = this.barManager1;
+            this.txtSOLUONG.Name = "txtSOLUONG";
+            this.txtSOLUONG.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSOLUONG.Size = new System.Drawing.Size(100, 20);
+            this.txtSOLUONG.TabIndex = 13;
+            // 
+            // txtMAVT
+            // 
+            this.txtMAVT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTPX, "MAVT", true));
+            this.txtMAVT.Location = new System.Drawing.Point(120, 30);
+            this.txtMAVT.MenuManager = this.barManager1;
+            this.txtMAVT.Name = "txtMAVT";
+            this.txtMAVT.Size = new System.Drawing.Size(100, 20);
+            this.txtMAVT.TabIndex = 11;
             // 
             // gcCTPX
             // 
             this.gcCTPX.DataSource = this.bdsCTPX;
             this.gcCTPX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcCTPX.Location = new System.Drawing.Point(470, 23);
+            this.gcCTPX.Location = new System.Drawing.Point(417, 23);
             this.gcCTPX.MainView = this.gridView2;
             this.gcCTPX.MenuManager = this.barManager1;
             this.gcCTPX.Name = "gcCTPX";
-            this.gcCTPX.Size = new System.Drawing.Size(452, 170);
+            this.gcCTPX.Size = new System.Drawing.Size(505, 132);
             this.gcCTPX.TabIndex = 4;
             this.gcCTPX.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -602,6 +627,27 @@
             this.colDONGIA.Visible = true;
             this.colDONGIA.VisibleIndex = 3;
             // 
+            // groupBoxPX
+            // 
+            this.groupBoxPX.Controls.Add(this.btnChonKho);
+            this.groupBoxPX.Controls.Add(mAKHOLabel);
+            this.groupBoxPX.Controls.Add(this.txtMAKHO);
+            this.groupBoxPX.Controls.Add(mANVLabel);
+            this.groupBoxPX.Controls.Add(this.txtMANV);
+            this.groupBoxPX.Controls.Add(hOTENKHLabel);
+            this.groupBoxPX.Controls.Add(this.txtHOTENKH);
+            this.groupBoxPX.Controls.Add(nGAYLabel);
+            this.groupBoxPX.Controls.Add(this.dateNGAY);
+            this.groupBoxPX.Controls.Add(mAPXLabel);
+            this.groupBoxPX.Controls.Add(this.txtMAPX);
+            this.groupBoxPX.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBoxPX.Location = new System.Drawing.Point(2, 23);
+            this.groupBoxPX.Name = "groupBoxPX";
+            this.groupBoxPX.Size = new System.Drawing.Size(415, 337);
+            this.groupBoxPX.TabIndex = 4;
+            this.groupBoxPX.TabStop = false;
+            this.groupBoxPX.Text = "Phiếu xuất";
+            // 
             // btnChonKho
             // 
             this.btnChonKho.Location = new System.Drawing.Point(222, 116);
@@ -613,106 +659,61 @@
             this.btnChonKho.UseVisualStyleBackColor = true;
             this.btnChonKho.Click += new System.EventHandler(this.btnChonKho_Click);
             // 
-            // groupBoxCTPX
+            // txtMAKHO
             // 
-            this.groupBoxCTPX.Controls.Add(this.btnChonVT);
-            this.groupBoxCTPX.Controls.Add(dONGIALabel);
-            this.groupBoxCTPX.Controls.Add(this.txtDONGIA);
-            this.groupBoxCTPX.Controls.Add(sOLUONGLabel);
-            this.groupBoxCTPX.Controls.Add(this.txtSOLUONG);
-            this.groupBoxCTPX.Controls.Add(mAVTLabel);
-            this.groupBoxCTPX.Controls.Add(this.txtMAVT);
-            this.groupBoxCTPX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxCTPX.Location = new System.Drawing.Point(470, 193);
-            this.groupBoxCTPX.Name = "groupBoxCTPX";
-            this.groupBoxCTPX.Size = new System.Drawing.Size(452, 126);
-            this.groupBoxCTPX.TabIndex = 5;
-            this.groupBoxCTPX.TabStop = false;
-            this.groupBoxCTPX.Text = "Chi tiết phiếu xuất";
+            this.txtMAKHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "MAKHO", true));
+            this.txtMAKHO.Location = new System.Drawing.Point(250, 74);
+            this.txtMAKHO.MenuManager = this.barManager1;
+            this.txtMAKHO.Name = "txtMAKHO";
+            this.txtMAKHO.Size = new System.Drawing.Size(100, 20);
+            this.txtMAKHO.TabIndex = 9;
             // 
-            // btnChonVT
+            // txtMANV
             // 
-            this.btnChonVT.Location = new System.Drawing.Point(256, 59);
-            this.btnChonVT.Margin = new System.Windows.Forms.Padding(4);
-            this.btnChonVT.Name = "btnChonVT";
-            this.btnChonVT.Size = new System.Drawing.Size(142, 37);
-            this.btnChonVT.TabIndex = 15;
-            this.btnChonVT.Text = "Chọn Vật Tư";
-            this.btnChonVT.UseVisualStyleBackColor = true;
+            this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "MANV", true));
+            this.txtMANV.Location = new System.Drawing.Point(250, 38);
+            this.txtMANV.MenuManager = this.barManager1;
+            this.txtMANV.Name = "txtMANV";
+            this.txtMANV.Size = new System.Drawing.Size(100, 20);
+            this.txtMANV.TabIndex = 7;
             // 
-            // dONGIALabel
+            // txtHOTENKH
             // 
-            dONGIALabel.AutoSize = true;
-            dONGIALabel.Location = new System.Drawing.Point(241, 33);
-            dONGIALabel.Name = "dONGIALabel";
-            dONGIALabel.Size = new System.Drawing.Size(51, 13);
-            dONGIALabel.TabIndex = 12;
-            dONGIALabel.Text = "DONGIA:";
+            this.txtHOTENKH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "HOTENKH", true));
+            this.txtHOTENKH.Location = new System.Drawing.Point(83, 112);
+            this.txtHOTENKH.MenuManager = this.barManager1;
+            this.txtHOTENKH.Name = "txtHOTENKH";
+            this.txtHOTENKH.Size = new System.Drawing.Size(100, 20);
+            this.txtHOTENKH.TabIndex = 5;
             // 
-            // txtDONGIA
+            // dateNGAY
             // 
-            this.txtDONGIA.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTPX, "DONGIA", true));
-            this.txtDONGIA.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtDONGIA.Location = new System.Drawing.Point(298, 30);
-            this.txtDONGIA.MenuManager = this.barManager1;
-            this.txtDONGIA.Name = "txtDONGIA";
-            this.txtDONGIA.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateNGAY.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "NGAY", true));
+            this.dateNGAY.EditValue = null;
+            this.dateNGAY.Location = new System.Drawing.Point(83, 74);
+            this.dateNGAY.MenuManager = this.barManager1;
+            this.dateNGAY.Name = "dateNGAY";
+            this.dateNGAY.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDONGIA.Size = new System.Drawing.Size(100, 20);
-            this.txtDONGIA.TabIndex = 14;
-            // 
-            // sOLUONGLabel
-            // 
-            sOLUONGLabel.AutoSize = true;
-            sOLUONGLabel.Location = new System.Drawing.Point(55, 71);
-            sOLUONGLabel.Name = "sOLUONGLabel";
-            sOLUONGLabel.Size = new System.Drawing.Size(59, 13);
-            sOLUONGLabel.TabIndex = 10;
-            sOLUONGLabel.Text = "SOLUONG:";
-            // 
-            // txtSOLUONG
-            // 
-            this.txtSOLUONG.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTPX, "SOLUONG", true));
-            this.txtSOLUONG.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtSOLUONG.Location = new System.Drawing.Point(120, 68);
-            this.txtSOLUONG.MenuManager = this.barManager1;
-            this.txtSOLUONG.Name = "txtSOLUONG";
-            this.txtSOLUONG.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateNGAY.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSOLUONG.Size = new System.Drawing.Size(100, 20);
-            this.txtSOLUONG.TabIndex = 13;
+            this.dateNGAY.Size = new System.Drawing.Size(100, 20);
+            this.dateNGAY.TabIndex = 3;
             // 
-            // mAVTLabel
+            // txtMAPX
             // 
-            mAVTLabel.AutoSize = true;
-            mAVTLabel.Location = new System.Drawing.Point(76, 33);
-            mAVTLabel.Name = "mAVTLabel";
-            mAVTLabel.Size = new System.Drawing.Size(38, 13);
-            mAVTLabel.TabIndex = 9;
-            mAVTLabel.Text = "MAVT:";
-            // 
-            // txtMAVT
-            // 
-            this.txtMAVT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTPX, "MAVT", true));
-            this.txtMAVT.Location = new System.Drawing.Point(120, 30);
-            this.txtMAVT.MenuManager = this.barManager1;
-            this.txtMAVT.Name = "txtMAVT";
-            this.txtMAVT.Size = new System.Drawing.Size(100, 20);
-            this.txtMAVT.TabIndex = 11;
+            this.txtMAPX.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPX, "MAPX", true));
+            this.txtMAPX.Location = new System.Drawing.Point(83, 38);
+            this.txtMAPX.MenuManager = this.barManager1;
+            this.txtMAPX.Name = "txtMAPX";
+            this.txtMAPX.Size = new System.Drawing.Size(100, 20);
+            this.txtMAPX.TabIndex = 1;
             // 
             // FormPhieuXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 648);
+            this.ClientSize = new System.Drawing.Size(924, 588);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcPX);
             this.Controls.Add(this.panelControl1);
@@ -733,22 +734,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupBoxPX.ResumeLayout(false);
-            this.groupBoxPX.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMAPX.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNGAY.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNGAY.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHOTENKH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMAKHO.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCTPX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcCTPX)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.groupBoxCTPX.ResumeLayout(false);
             this.groupBoxCTPX.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDONGIA.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCTPX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSOLUONG.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMAVT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCTPX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            this.groupBoxPX.ResumeLayout(false);
+            this.groupBoxPX.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMAKHO.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMANV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHOTENKH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNGAY.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNGAY.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMAPX.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
