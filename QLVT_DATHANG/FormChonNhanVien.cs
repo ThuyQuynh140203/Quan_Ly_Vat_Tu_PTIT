@@ -18,22 +18,6 @@ namespace QLVT_DATHANG
             InitializeComponent();
         }
 
-        private void nhanVienBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bdsNV.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.DS);
-
-        }
-
-        private void nhanVienBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bdsNV.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.DS);
-
-        }
-
         private void FormChonNhanVien_Load(object sender, EventArgs e)
         {
             DS.EnforceConstraints = false;

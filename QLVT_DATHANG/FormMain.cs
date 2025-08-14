@@ -258,5 +258,20 @@ namespace QLVT_DATHANG
                 form.Show();
             }
         }
-    }   
+
+        private void btnTaoTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = this.CheckExists(typeof(FormTaoTaiKhoan));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                FormTaoTaiKhoan form = new FormTaoTaiKhoan();
+                //form.MdiParent = this;
+                form.Show();
+            }
+        }
+    }
 }

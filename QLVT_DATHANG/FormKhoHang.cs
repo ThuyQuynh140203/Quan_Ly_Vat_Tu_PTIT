@@ -503,29 +503,5 @@ namespace QLVT_DATHANG
         {
             this.Close();
         }
-
-        private void khoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bdsKho.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.DS);
-
-        }
-
-        private void khoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bdsKho.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.DS);
-
-        }
-
-        private void khoBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bdsKho.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.DS);
-
-        }
     }
 }
